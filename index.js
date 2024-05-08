@@ -4,9 +4,7 @@ const port = 3000;
 
 const router1 = require('./route1')
 app.get('/',(req,res)=>{
-    res.json({msg:'hey you'}
-    );
-})
+    res.send(' <a href="/route1" > go to </a>')})
 app.use('/route1',router1)
 
 app.listen(port,()=>{console.log(`server action on port ${port}`);})

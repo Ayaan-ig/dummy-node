@@ -7,7 +7,7 @@ app.get('/',(req,res)=>{
     );
 })
 app.get('/route1',(req,res)=>{
-    res.send({msg:'hey you in route1'});
+    res.json({msg:'hey you in route1'});
 })
 
 app.listen(port,()=>{console.log(`server action on port ${port}`);})

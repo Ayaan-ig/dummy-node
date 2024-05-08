@@ -1,4 +1,5 @@
 const express = require('express')
+const serverless =  require('serverless-http')
 const app = express();
 const port = 3000;
 
@@ -11,3 +12,5 @@ app.get('/route1',(req,res)=>{
 })
 
 app.listen(port,()=>{console.log(`server action on port ${port}`);})
+
+module.exports.handler = serverless(app);
